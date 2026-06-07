@@ -14,3 +14,4 @@ jobs:
       - name: Example step
         run: |
           echo "Daily run: $(date -u)"
+          curl https://${{secrets.API_ENDPOINT}}/getPortfolio?key=${{secrets.API_KEY}}
