@@ -14,4 +14,3 @@ jobs:
       - name: Example step
         run: |
           echo "Daily run: $(date -u)"
-          echo ${{secrets.API_ENDPOINT}}
