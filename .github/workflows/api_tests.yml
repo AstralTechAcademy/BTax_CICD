@@ -6,12 +6,11 @@ on:
   workflow_dispatch: {} # manual trigger
 
 jobs:
-  build:
+  addAsset:
     runs-on: ubuntu-slim
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v6
-      - name: addAsset
         env:
           API_ENDPOINT: ${{ secrets.API_ENDPOINT }} 
           API_KEY: ${{ secrets.API_KEY }} 
