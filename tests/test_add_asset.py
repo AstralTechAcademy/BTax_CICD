@@ -2,8 +2,8 @@ import os
 import requests
 import pytest
 
-API_ENDPOINT = "btax-dev-gateway-cca0vfdg.ew.gateway.dev"#os.getenv("API_ENDPOINT")
-API_KEY = "AIzaSyDP2FPH8Acc0IDLTcK3fNQPO_dgvU8MjcI"#os.getenv("API_KEY")
+API_ENDPOINT = os.getenv("API_ENDPOINT")
+API_KEY = os.getenv("API_KEY")
 
 URL = f"https://{API_ENDPOINT}/assets?key={API_KEY}"
 
