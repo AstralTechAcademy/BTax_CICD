@@ -28,6 +28,6 @@ def test_add_asset():
         "datetime" : "2026-06-16 17:19:16",
         "comments" : ""
     })
-    print(resp.content)
+    print(resp)
     assert resp.status_code == 200
 
