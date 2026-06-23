@@ -9,7 +9,7 @@ URL = f"https://{API_ENDPOINT}/sellAsset?key={API_KEY}"
 
 def test_sell_asset():
     expected_result= {"ops": [{"buy_price_eur": 31.0, "earnings": 38.500000000000014, "retired": 5.0, "sold_price_eur": 38.7}, {"buy_price_eur": 30.0, "earnings": 125.50000000000004, "retired": 10.0, "sold_price_eur": 38.7}, {"buy_price_eur": 28.38, "earnings": 135.82000000000005, "retired": 1.0, "sold_price_eur": 38.7}], "total_available": 25.0, "total_available_after": 9.0, "total_earnings": 135.82000000000005, "total_retired": 16.0}
-    resp = requests.post(URL, json={
+    resp = requests.post(URL, params={"cicd": 1},json={
         "origin" : {
             "wallet" : 88,
             "amount" : 16,
