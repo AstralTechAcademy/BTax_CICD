@@ -45,15 +45,15 @@ jobs:
           pytest tests/test_sell_asset.py
           pytest tests/test_sell_gbp_asset.py
           pytest tests/test_sell_usd_asset.py
-    addDividend:
-      runs-on: ubuntu-slim
-      steps:
-        - uses: actions/checkout@v4
-        - uses: actions/setup-python@v6
-        - name: sellAsset
-          env:
-            API_ENDPOINT: ${{ secrets.API_ENDPOINT }} 
-            API_KEY: ${{ secrets.API_KEY }} 
-          run: |
-            pip install -r requirements.txt
-            pytest tests/test_add_dividend.py
+  addDividend:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+      - name: sellAsset
+        env:
+          API_ENDPOINT: ${{ secrets.API_ENDPOINT }} 
+          API_KEY: ${{ secrets.API_KEY }} 
+        run: |
+          pip install -r requirements.txt
+          pytest tests/test_add_dividend.py
