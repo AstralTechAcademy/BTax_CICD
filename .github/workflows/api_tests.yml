@@ -43,3 +43,5 @@ jobs:
         run: |
           pip install -r requirements.txt
           pytest tests/test_sell_asset.py
+          pytest tests/test_sell_gbp_asset.py
+          pytest tests/test_sell_usd_asset.py
