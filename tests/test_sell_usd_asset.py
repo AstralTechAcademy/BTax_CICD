@@ -19,12 +19,12 @@ def test_sell_usd_asset():
         "destination" : {
             "wallet" : 92,
             "amount" : 295.84,
-            "fiat" : 1.0
+            "eur_rate" : 1.0
         },
         "fees": {
             "wallet" : 92,
             "amount": 0.0,
-            "fiat": 1.0
+            "eur_rate": 1.0
         },
         "datetime" : "2026-06-16 17:19:16",
         "comments" : ""
