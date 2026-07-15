@@ -50,10 +50,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v6
-      - name: sellAsset
+      - name: addDividend
         env:
           API_ENDPOINT: ${{ secrets.API_ENDPOINT }} 
           API_KEY: ${{ secrets.API_KEY }} 
         run: |
           pip install -r requirements.txt
           pytest tests/test_add_dividend.py
+  delDividend:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+      - name: delDividend
+        env:
+          API_ENDPOINT: ${{ secrets.API_ENDPOINT }} 
+          API_KEY: ${{ secrets.API_KEY }} 
+        run: |
+          pip install -r requirements.txt
+          pytest tests/test_del_dividend.py
+  getPortfolio:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+      - name: getPortfolio
+        env:
+          API_ENDPOINT: ${{ secrets.API_ENDPOINT }} 
+          API_KEY: ${{ secrets.API_KEY }} 
+        run: |
+          pip install -r requirements.txt
+          pytest tests/test_get_portfolio.py
