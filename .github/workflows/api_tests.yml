@@ -86,7 +86,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v6
-      - name: getPortfolio
+      - name: getStockPrices
         env:
           API_ENDPOINT: ${{ secrets.API_ENDPOINT }} 
           API_KEY: ${{ secrets.API_KEY }} 
