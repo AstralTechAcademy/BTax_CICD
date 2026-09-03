@@ -11,7 +11,7 @@ URL = f"https://{API_ENDPOINT}/prices"
 
 def test_get_stock_prives():
     res = requests.get(URL, params={"key": API_KEY})
-    price_date = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
+    price_date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
 
     assert res.status_code == 200
 
